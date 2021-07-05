@@ -6,8 +6,8 @@ If you must download one please use the release tab for tagged safe versions.
 ## Contents
 
 - Random 
--- Just QoL / alters I use, not for redist as lacking permissions from VTAW
+- - Just QoL / alters I use, not for redist as lacking permissions from VTAW
 - POC
--- Various proofing esps for things in other mods
+- - Various proofing esps for things in other mods
 - Deathclaw Companion
--- NSFW Deathclaw "Companion"
+- - NSFW Deathclaw "Companion"
