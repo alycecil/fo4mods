@@ -6,6 +6,12 @@ Actor Property Penetrator Auto
 Actor Property Receiver Auto
 {The person being penetrated/receiving.}
 
+Quest Property ALICEClawAAFPostListenter Auto
+{The Quest to trigger withscript Alice:AAFHook}
+
+Scene Property pScene Auto
+{The Scene to trigger on Finish}
+
 AAF:AAF_API AAF_API
 
  Function LoadAAF()
@@ -18,13 +24,20 @@ AAF:AAF_API AAF_API
 		Actor[] Actors = New Actor [2]
 		Actors[0] = Receiver
 		Actors[1] = Penetrator
-
               settings.duration = 30.0
    		 settings.preventFurniture = False
    		 settings.usePackages = True
    		 settings.position = None
     		settings.includeTags = None
     		settings.excludeTags = None
+
+	     Alice:AAFHook hook
+            hook = ALICEClawAAFPostListenter as Alice:AAFHook 
+            hook.pScene = pScene
+
+           ALICEClawAAFPostListenter.Start()
+           ALICEClawAAFPostListenter.SetStage(10)
+
 
 		AAF:AAF_API.GetAPI().StartScene(Actors, settings)
         Endif
